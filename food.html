@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food — Il Tuo Locale</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="barra-top">
+  <a class="indietro" href="index.html" data-en="&larr; Home">&larr; Home</a>
+  <div class="lingua">
+    <button type="button" id="btn-it" class="attiva" onclick="cambiaLingua('it')">IT</button>
+    <span class="divisore">/</span>
+    <button type="button" id="btn-en" onclick="cambiaLingua('en')">EN</button>
+  </div>
+</div>
+ 
+<header>
+  <div class="logo">Food</div>
+  <div class="sottotitolo" data-en="Small plates, toasts, focaccia">Piattini, crostoni, focacce</div>
+</header>
+ 
+<nav class="categorie">
+  <a href="#piattini" data-en="Small plates">Piattini</a>
+  <a href="#crostoni" data-en="Toasts">Crostoni</a>
+  <a href="#focacce" data-en="Focaccia">Focacce</a>
+</nav>
+ 
+<div class="contenitore">
+ 
+  <!-- ===== PIATTINI ===== -->
+  <section class="sezione" id="piattini">
+    <h2 class="titolo-sezione" data-en="Small plates">Piattini</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome" data-en="Olives">Olive</span>
+          <span class="leader"></span>
+          <span class="prezzo">2,00 €</span>
+        </div>
+        <div class="descrizione" data-en="sweet Sicilian green olives">verdi dolci siciliane</div>
+        <div class="tags">
+          <span class="tag" title="Vegano">VG</span>
+        </div>
+      </li>
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Taralli</span>
+          <span class="leader"></span>
+          <span class="prezzo">2,00 €</span>
+        </div>
+        <div class="descrizione" data-en="6 pcs">6 pz</div>
+        <div class="tags">
+          <span class="tag" title="Glutine">G</span>
+          <span class="tag" title="Vegano">VG</span>
+        </div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+  <!-- ===== CROSTONI ===== -->
+  <section class="sezione" id="crostoni">
+    <h2 class="titolo-sezione" data-en="Toasts">Crostoni</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Nome Crostone</span>
+          <span class="leader"></span>
+          <span class="prezzo">6,00 €</span>
+        </div>
+        <div class="descrizione" data-en="toasted bread, topping of the day">pane tostato, farcitura del giorno</div>
+        <div class="tags">
+          <span class="tag" title="Glutine">G</span>
+          <span class="tag" title="Latte">L</span>
+          <span class="tag" title="Vegetariano">VE</span>
+        </div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+  <!-- ===== FOCACCE ===== -->
+  <section class="sezione" id="focacce">
+    <h2 class="titolo-sezione" data-en="Focaccia">Focacce</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Nome Focaccia</span>
+          <span class="leader"></span>
+          <span class="prezzo">9,00 €</span>
+        </div>
+        <div class="descrizione" data-en="filling one, filling two">farcitura uno, farcitura due</div>
+        <div class="tags">
+          <span class="tag" title="Glutine">G</span>
+          <span class="tag" title="Latte">L</span>
+        </div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+</div>
+ 
+<!-- ===== PULSANTE LEGENDA IN BASSO A DESTRA ===== -->
+<button type="button" class="bottone-legenda" id="bottone-legenda"
+        aria-expanded="false" aria-controls="pannello-legenda"
+        onclick="apriChiudiLegenda()" title="Legenda allergeni">i</button>
+ 
+<div class="pannello-legenda" id="pannello-legenda" hidden>
+  <h3 data-en="Allergens key">Legenda allergeni</h3>
+  <ul>
+    <li><span class="tag">G</span> <span data-en="Gluten">Glutine</span></li>
+    <li><span class="tag">L</span> <span data-en="Milk">Latte</span></li>
+    <li><span class="tag">U</span> <span data-en="Eggs">Uova</span></li>
+    <li><span class="tag">FG</span> <span data-en="Nuts">Frutta a guscio</span></li>
+    <li><span class="tag">AR</span> <span data-en="Peanuts">Arachidi</span></li>
+    <li><span class="tag">SO</span> <span data-en="Soy">Soia</span></li>
+    <li><span class="tag">SE</span> <span data-en="Sesame">Sesamo</span></li>
+    <li><span class="tag">SN</span> <span data-en="Mustard">Senape</span></li>
+    <li><span class="tag">SD</span> <span data-en="Celery">Sedano</span></li>
+    <li><span class="tag">P</span> <span data-en="Fish">Pesce</span></li>
+    <li><span class="tag">M</span> <span data-en="Molluscs">Molluschi</span></li>
+    <li><span class="tag">CR</span> <span data-en="Crustaceans">Crostacei</span></li>
+    <li><span class="tag">LU</span> <span data-en="Lupin">Lupini</span></li>
+    <li><span class="tag">S</span> <span data-en="Sulphites">Solfiti</span></li>
+    <li><span class="tag">VE</span> <span data-en="Vegetarian">Vegetariano</span></li>
+    <li><span class="tag">VG</span> <span data-en="Vegan">Vegano</span></li>
+  </ul>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
