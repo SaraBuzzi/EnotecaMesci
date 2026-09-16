@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wine — Il Tuo Locale</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="barra-top">
+  <a class="indietro" href="index.html" data-en="&larr; Home">&larr; Home</a>
+  <div class="lingua">
+    <button type="button" id="btn-it" class="attiva" onclick="cambiaLingua('it')">IT</button>
+    <span class="divisore">/</span>
+    <button type="button" id="btn-en" onclick="cambiaLingua('en')">EN</button>
+  </div>
+</div>
+ 
+<header>
+  <div class="logo">Wine</div>
+  <div class="sottotitolo" data-en="Cocktails, wine, beer">Cocktail, vini, birre</div>
+</header>
+ 
+<nav class="categorie">
+  <a href="#firma" data-en="Signature">In Carta</a>
+  <a href="#classici" data-en="Classics">I Classici</a>
+  <a href="#analcolici" data-en="Alcohol free">Analcolici</a>
+  <a href="#vini" data-en="Wine">Vini</a>
+  <a href="#birre" data-en="Beer">Birre</a>
+</nav>
+ 
+<div class="contenitore">
+ 
+  <!-- ===== COCKTAIL DI FIRMA ===== -->
+  <section class="sezione" id="firma">
+    <h2 class="titolo-sezione" data-en="Signature">In Carta</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Nome Cocktail 1</span>
+          <span class="leader"></span>
+          <span class="prezzo">10,00 €</span>
+        </div>
+        <span class="tagline" data-en="short drink claim">breve claim del drink</span>
+        <div class="descrizione" data-en="ingredient one, ingredient two, ingredient three">ingrediente uno, ingrediente due, ingrediente tre</div>
+        <div class="tags">
+          <span class="tag" title="Tumbler basso">TB</span>
+        </div>
+      </li>
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Nome Cocktail 2</span>
+          <span class="leader"></span>
+          <span class="prezzo">11,00 €</span>
+        </div>
+        <span class="tagline" data-en="short drink claim">breve claim del drink</span>
+        <div class="descrizione" data-en="ingredient one, ingredient two, ingredient three">ingrediente uno, ingrediente due, ingrediente tre</div>
+        <div class="tags">
+          <span class="tag" title="Coppetta">CP</span>
+        </div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+  <!-- ===== CLASSICI ===== -->
+  <section class="sezione" id="classici">
+    <h2 class="titolo-sezione" data-en="Classics">I Classici</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Negroni</span>
+          <span class="leader"></span>
+          <span class="prezzo">9,00 €</span>
+        </div>
+        <div class="descrizione" data-en="red vermouth, bitter, gin">vermouth rosso, bitter, gin</div>
+      </li>
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Spritz</span>
+          <span class="leader"></span>
+          <span class="prezzo">7,00 €</span>
+        </div>
+        <div class="descrizione" data-en="your choice: aperol, campari, select">a scelta: aperol, campari, select</div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+  <!-- ===== ANALCOLICI ===== -->
+  <section class="sezione" id="analcolici">
+    <h2 class="titolo-sezione" data-en="Alcohol free">Analcolici</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome" data-en="Alcohol-free Gin Tonic">Gin Tonic Analcolico</span>
+          <span class="leader"></span>
+          <span class="prezzo">8,00 €</span>
+        </div>
+        <div class="descrizione" data-en="alcohol-free gin, tonic">gin analcolico, tonica</div>
+      </li>
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome" data-en="Water">Acqua</span>
+          <span class="leader"></span>
+          <span class="prezzo">1,50 €</span>
+        </div>
+        <div class="descrizione" data-en="still or sparkling">naturale o frizzante</div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+  <!-- ===== VINI ===== -->
+  <section class="sezione" id="vini">
+    <h2 class="titolo-sezione" data-en="Wine">Vini</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome" data-en="Wine by the glass">Vino al calice</span>
+          <span class="leader"></span>
+          <span class="prezzo">6,00 €</span>
+        </div>
+        <div class="descrizione" data-en="house white or red">bianco o rosso della casa</div>
+        <div class="tags"><span class="tag" title="Solfiti">S</span></div>
+      </li>
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome">Nome Bottiglia</span>
+          <span class="leader"></span>
+          <span class="prezzo">30,00 €</span>
+        </div>
+        <div class="descrizione">(vitigno, produttore, regione)</div>
+        <div class="tags"><span class="tag" title="Solfiti">S</span></div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+  <!-- ===== BIRRE ===== -->
+  <section class="sezione" id="birre">
+    <h2 class="titolo-sezione" data-en="Beer">Birre</h2>
+    <ul class="lista-voci">
+ 
+      <li class="voce">
+        <div class="riga-nome">
+          <span class="nome" data-en="Draught beer">Birra alla spina</span>
+          <span class="leader"></span>
+          <span class="prezzo">4,00 € / 6,00 €</span>
+        </div>
+        <div class="descrizione">0,3 l / 0,5 l</div>
+        <div class="tags"><span class="tag" title="Glutine">G</span></div>
+      </li>
+ 
+    </ul>
+  </section>
+ 
+</div>
+ 
+<!-- ===== PULSANTE LEGENDA IN BASSO A DESTRA ===== -->
+<button type="button" class="bottone-legenda" id="bottone-legenda"
+        aria-expanded="false" aria-controls="pannello-legenda"
+        onclick="apriChiudiLegenda()" title="Legenda">i</button>
+ 
+<div class="pannello-legenda" id="pannello-legenda" hidden>
+  <h3 data-en="Key">Legenda</h3>
+  <ul>
+    <li><span class="tag">TB</span> <span data-en="Low tumbler">Tumbler basso</span></li>
+    <li><span class="tag">TA</span> <span data-en="Tall tumbler">Tumbler alto</span></li>
+    <li><span class="tag">CP</span> <span data-en="Coupe">Coppetta</span></li>
+    <li><span class="tag">MG</span> <span data-en="Mug">Mug</span></li>
+    <li><span class="tag">S</span> <span data-en="Sulphites">Solfiti</span></li>
+    <li><span class="tag">G</span> <span data-en="Gluten">Glutine</span></li>
+  </ul>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
