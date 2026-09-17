@@ -7,34 +7,40 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-<div class="barra-top">
-  <a class="indietro" href="index.html" data-en="&larr; Home">&larr; Home</a>
-  <div class="lingua">
-    <button type="button" id="btn-it" class="attiva" onclick="cambiaLingua('it')">IT</button>
-    <span class="divisore">/</span>
-    <button type="button" id="btn-en" onclick="cambiaLingua('en')">EN</button>
-  </div>
-</div>
- 
+
+<header class="nav-sito">
+  <a class="logo-sito" href="index.html">MESCI</a>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html#scegli-menu" class="attivo">Menu</a>
+    <a href="visit.html">Visit</a>
+    <div class="lingua">
+      <button type="button" id="btn-it" class="attiva" onclick="cambiaLingua('it')">IT</button>
+      <span class="divisore">/</span>
+      <button type="button" id="btn-en" onclick="cambiaLingua('en')">EN</button>
+    </div>
+  </nav>
+</header>
+
 <header>
   <div class="logo">Food</div>
   <div class="sottotitolo" data-en="Small plates, toasts, focaccia">Piattini, crostoni, focacce</div>
 </header>
- 
+
 <nav class="categorie">
   <a href="#piattini" data-en="Small plates">Piattini</a>
   <a href="#crostoni" data-en="Toasts">Crostoni</a>
   <a href="#focacce" data-en="Focaccia">Focacce</a>
 </nav>
- 
+
 <div class="contenitore">
- 
+
   <!-- ===== PIATTINI ===== -->
   <section class="sezione" id="piattini">
     <h2 class="titolo-sezione" data-en="Small plates">Piattini</h2>
     <ul class="lista-voci">
- 
+
       <li class="voce">
         <div class="riga-nome">
           <span class="nome" data-en="Olives">Olive</span>
@@ -46,7 +52,7 @@
           <span class="tag" title="Vegano">VG</span>
         </div>
       </li>
- 
+
       <li class="voce">
         <div class="riga-nome">
           <span class="nome">Taralli</span>
@@ -59,15 +65,15 @@
           <span class="tag" title="Vegano">VG</span>
         </div>
       </li>
- 
+
     </ul>
   </section>
- 
+
   <!-- ===== CROSTONI ===== -->
   <section class="sezione" id="crostoni">
     <h2 class="titolo-sezione" data-en="Toasts">Crostoni</h2>
     <ul class="lista-voci">
- 
+
       <li class="voce">
         <div class="riga-nome">
           <span class="nome">Nome Crostone</span>
@@ -81,15 +87,15 @@
           <span class="tag" title="Vegetariano">VE</span>
         </div>
       </li>
- 
+
     </ul>
   </section>
- 
+
   <!-- ===== FOCACCE ===== -->
   <section class="sezione" id="focacce">
     <h2 class="titolo-sezione" data-en="Focaccia">Focacce</h2>
     <ul class="lista-voci">
- 
+
       <li class="voce">
         <div class="riga-nome">
           <span class="nome">Nome Focaccia</span>
@@ -102,17 +108,17 @@
           <span class="tag" title="Latte">L</span>
         </div>
       </li>
- 
+
     </ul>
   </section>
- 
+
 </div>
- 
+
 <!-- ===== PULSANTE LEGENDA IN BASSO A DESTRA ===== -->
 <button type="button" class="bottone-legenda" id="bottone-legenda"
         aria-expanded="false" aria-controls="pannello-legenda"
         onclick="apriChiudiLegenda()" title="Legenda allergeni">i</button>
- 
+
 <div class="pannello-legenda" id="pannello-legenda" hidden>
   <h3 data-en="Allergens key">Legenda allergeni</h3>
   <ul>
@@ -134,7 +140,7 @@
     <li><span class="tag">VG</span> <span data-en="Vegan">Vegano</span></li>
   </ul>
 </div>
- 
+
 <script src="script.js"></script>
 </body>
 </html>
