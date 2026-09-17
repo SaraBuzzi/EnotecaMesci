@@ -31,54 +31,55 @@ a { color: inherit; }
   padding: 0 24px 120px;
 }
 
-/* ---------- BARRA IN ALTO (lingua + indietro) ---------- */
-.barra-top{
-  display:flex;
-  justify-content:space-between;
+/* ---------- BARRA DI NAVIGAZIONE (logo al centro, link a destra) ---------- */
+.nav-sito{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items:center;
-  padding: 16px 24px 0;
+  gap: 16px;
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--linea);
 }
-.indietro{
-  font-size: 0.8rem;
-  color: var(--testo-muto);
-  text-decoration:none;
-}
-.indietro:hover{ color: var(--accento); }
-
-.lingua{ display:flex; align-items:center; gap: 6px; }
-.lingua button{
-  background:none; border:none;
-  padding: 6px 4px;
-  cursor:pointer;
-  font-family: var(--font-testo);
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
-  color: var(--testo-muto);
-}
-.lingua button.attiva{
-  color: var(--accento);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.lingua button:focus-visible,
-.bottone-legenda:focus-visible,
-.bottone-home:focus-visible{
-  outline: 2px solid var(--accento);
-  outline-offset: 3px;
-}
-.lingua .divisore{ color: var(--linea); }
-
-/* ---------- HEADER ---------- */
-header{ text-align:center; padding: 24px 24px 32px; }
-header .logo{
+.nav-sito .logo-sito{
+  grid-column: 2;
   font-family: var(--font-titoli);
-  font-size: 2.6rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.16em;
+  color: var(--testo);
+  text-decoration:none;
+  text-align:center;
 }
-header .sottotitolo{
+.nav-sito .nav-links{
+  grid-column: 3;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.nav-links a{
+  text-decoration:none;
   color: var(--testo-muto);
-  margin-top: 8px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover{ color: var(--testo); }
+.nav-links a.attivo{
+  color: var(--accento);
+  border-bottom-color: var(--accento);
+}
+.nav-links .lingua{ margin-left: 6px; }
+
+@media (max-width: 640px){
+  .nav-sito{
+    grid-template-columns: 1fr;
+    justify-items:center;
+    gap: 14px;
+  }
+  .nav-sito .logo-sito{ grid-column: 1; }
+  .nav-sito .nav-links{ grid-column: 1; justify-content:center; }
 }
 
 /* ---------- HOME: i due pulsanti WINE / FOOD ---------- */
@@ -90,12 +91,6 @@ header .sottotitolo{
   align-items:center;
   padding: 24px;
   text-align:center;
-}
-.home .logo{
-  font-family: var(--font-titoli);
-  font-size: 3.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
 }
 .home .sottotitolo{
   color: var(--testo-muto);
@@ -245,7 +240,6 @@ footer{
 footer a{ color: var(--accento); text-decoration:none; }
 
 @media (max-width: 480px){
-  header .logo{ font-size: 2.1rem; }
-  .home .logo{ font-size: 2.6rem; }
+  .nav-sito .logo-sito{ font-size: 1.3rem; }
   .riga-nome .nome{ font-size: 1.05rem; }
 }
